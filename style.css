@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.main{
+    display: flex;
+    background-color:hsl(13, 31%, 94%);
+}
+section{
+    padding: 10rem 7% 2rem;;
+}
+
+.dessert h1{
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.dessert-liste{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.dessert-liste .photo-dessert {
+    border-radius: 20px;
+    width: 100%;
+}
+
+.dessert-card{
+    position: relative;
+}
+
+.dessert-img{
+    position: relative;
+}
+.add-dessert{
+    display:flex;
+    flex-direction: row;
+    gap: 10px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    background-color: white;
+    cursor: pointer;
+}
+
+
+
+.add-dessert img,
+.add-dessert p{
+    background-color: white;
+}
+
+.add-dessert:hover{
+    color: hsl(14, 86%, 42%);
+    border-color: hsl(14, 86%, 42%);
+}
+
+
+.dessert-info{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dessert-prix{
+    color:hsl(14, 86%, 42%) ;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.liste-add{
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    width: 30vw;
+    padding: 15px 20px 30px;
+    position: sticky;
+    top: 20px;
+    right: 20px;
+}
+
+.liste-add .gateau{
+    margin: 30px auto;
+}
+
+.liste-add p{
+    text-align: center;
+    font-size: 14px;
+}
+
+.empty{
+    display: flex;
+    flex-direction: column;
+}
+
+.compteur{
+    display: none;
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    background-color: white;
+    cursor: pointer;
+    color: white;
+    background-color: hsl(14, 86%, 42%) ;
+}
+
+
+.order-total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.checkout{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+}
+
+.carbon-neutral{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: hsl(20, 50%, 98%);
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.confirm-order,
+.start-new-order{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(14, 86%, 42%);
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    padding: 12px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.liste-add h2{
+    color: hsl(14, 86%, 42%);
+}
+
+.liste-add .text{
+    color: hsl(7, 20%, 60%);
+}
+
+.liste-add-details{
+    display: none;
+}
+
+.cart-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+/* Styles de la modal */
+.modal {
+    display: none; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 40px; 
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); 
+    z-index: 1000;
+    text-align: center;
+    max-width: 500px; 
+    width: 90%; 
+}
+
+.modal i {
+    color: hsl(159, 69%, 38%);
+    font-size: 50px; 
+    margin-bottom: 30px;
+    display: flex;
+}
+
+
+.modal h2{
+    font-size: 24px;
+    margin: 15px 0;
+    display: flex;
+}
+
+.modal p {
+    font-size: 18px;
+    margin: 10px 0 20px;
+    display: flex;
+}
+
+.modal .text{
+    color: hsl(7, 20%, 60%);
+}
+
+.modal-cart-items {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 15px;
+}
+
+.modal-order-total {
+    margin-top: 20px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.modal-order-total p {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#modal-total-price {
+    color: hsl(14, 86%, 42%);
+    font-weight: bold;
+    font-size: 28px;
+}
+
+/* Éléments cachés */
+.liste-add-details {
+    display: none;
+}
+
+/* Ombre d'arrière-plan */
+body::before {
+    display: none; /* A changer si besoin */
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999; /* Juste en dessous de la modal */
+}
+
+body.show-before::before {
+    display: block; /* Montre l'élément when `show-before` class is added */
+}
