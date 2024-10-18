@@ -276,3 +276,75 @@ body::before {
 body.show-before::before {
     display: block; /* Montre l'élément when `show-before` class is added */
 }
+
+@media (max-width: 768px) {
+
+    .main{
+        flex-direction: column;
+    }
+    .dessert-liste {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .dessert h1 {
+        font-size: 24px;
+    }
+
+    .dessert-prix {
+        font-size: 18px;
+    }
+
+    .liste-add {
+        width:100%
+    }
+
+    .liste-add p {
+        font-size: 16px;
+    }
+
+    .confirm-order, .start-new-order {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .carbon-neutral{
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    section{
+        padding: 1rem 7% 2rem;;
+    } 
+
+    .dessert-liste {
+        grid-template-columns: 1fr; /* Une seule colonne */
+    }
+
+    .dessert h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+
+    .dessert-prix {
+        font-size: 16px;
+    }
+
+    .liste-add {
+        width: 70%;
+        left: 69px;
+    }
+
+    .liste-add p {
+        font-size: 10px; /* Réduire la taille du texte pour mobile */
+    }
+
+    .confirm-order, .start-new-order {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
